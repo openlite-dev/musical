@@ -12,7 +12,9 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello world</Text>
+      <Text style={{ fontWeight: 900, fontSize: 34 }}>Co Text Bold</Text>
+      <Text style={{ fontSize: 30 }}>Co Text</Text>
+      <Text>Co Text</Text>
     </View>
   )
 }
