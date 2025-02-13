@@ -7,6 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "scheme": "musical",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -28,6 +29,12 @@
       "eas": {
         "projectId": "31f6eae3-a2a4-44c7-9eb0-541d9d8a1666"
       }
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }

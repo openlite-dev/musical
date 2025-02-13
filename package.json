@@ -1,23 +1,35 @@
 {
   "name": "musical",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "expo-router/entry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
   "dependencies": {
     "expo": "~52.0.33",
+    "expo-constants": "~17.0.5",
+    "expo-linking": "~7.0.5",
+    "expo-router": "~4.0.17",
     "expo-status-bar": "~2.0.1",
     "react": "18.3.1",
-    "react-native": "0.76.7"
+    "react-native": "0.76.7",
+    "react-native-safe-area-context": "4.12.0",
+    "react-native-screens": "~4.4.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^4.2.0",
     "@babel/core": "^7.25.2",
+    "@eslint-react/eslint-plugin": "^1.26.2",
     "@types/react": "~18.3.12",
+    "eslint": "^9.20.1",
+    "eslint-plugin-format": "^1.0.1",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
     "typescript": "^5.3.3"
-  },
-  "private": true
+  }
 }
