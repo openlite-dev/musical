@@ -6,6 +6,8 @@
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
+    "fmt": "prettier '**/*.{js,ts,json,md,yml,yaml,tsx,jsx}' --write",
+    "fmt:check": "prettier '**/*.{js,ts,json,md,yml,yaml,tsx,jsx}' --check",
     "lint": "oxlint -c oxlint.json app --deny-warnings",
     "ios": "expo start --ios",
     "web": "expo start --web"
@@ -21,10 +23,18 @@
     "react-native-safe-area-context": "4.12.0",
     "react-native-screens": "~4.4.0"
   },
-  "devDependencies": {    
-    "@babel/core": "^7.25.2",    
-    "@types/react": "~18.3.12",    
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "~18.3.12",
     "oxlint": "^0.15.10",
+    "prettier": "^3.5.1",
     "typescript": "^5.3.3"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
   }
 }

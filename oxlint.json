@@ -1,13 +1,13 @@
 {
- "$schema": "./node_modules/oxlint/configuration_schema.json",
- "plugins": ["import", "typescript", "unicorn"],
- "rules": {
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["import", "typescript", "unicorn"],
+  "rules": {
     "no-unused-vars": [
       "warn",
       { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
     ]
- },
- "overrides": [
+  },
+  "overrides": [
     {
       "files": ["*.test.ts", "*.spec.ts"],
       "rules": {
