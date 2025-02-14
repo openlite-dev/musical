@@ -14,6 +14,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={{ fontWeight: 900, fontSize: 34 }}>Co Text Bold</Text>
       <Text style={{ fontSize: 30 }}>Co Text</Text>
+      <Text style={{ fontSize: 30 }}>Co Text Test</Text>
       <Text>Co Text</Text>
     </View>
   )
