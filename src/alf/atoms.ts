@@ -150,6 +150,9 @@ export const atoms = {
   gap_5xl: {
     gap: tokens.space._5xl,
   },
+  hidden: {
+    display: 'none',
+  },
   flex: {
     display: 'flex',
   },
@@ -638,4 +641,331 @@ export const atoms = {
   pr_5xl: {
     paddingRight: tokens.space._5xl,
   },
-}
+
+  /*==============================================
+  =                    MARGIN                   =
+  = ------------------------------------------- =
+  = Atomic styles for dimensional control.      =
+  = Includes width, height, max/min dimensions  =
+  = and aspect ratio properties for precise     =
+  = element sizing and proportions.             =
+  ===============================================*/
+  m_0: {
+    margin: 0,
+  },
+  m_2xs: {
+    margin: tokens.space._2xs,
+  },
+  m_xs: {
+    margin: tokens.space.xs,
+  },
+  m_sm: {
+    margin: tokens.space.sm,
+  },
+  m_md: {
+    margin: tokens.space.md,
+  },
+  m_lg: {
+    margin: tokens.space.lg,
+  },
+  m_xl: {
+    margin: tokens.space.xl,
+  },
+  m_2xl: {
+    margin: tokens.space._2xl,
+  },
+  m_3xl: {
+    margin: tokens.space._3xl,
+  },
+  m_4xl: {
+    margin: tokens.space._4xl,
+  },
+  m_5xl: {
+    margin: tokens.space._5xl,
+  },
+  m_auto: {
+    margin: 'auto',
+  },
+  mx_0: {
+    marginLeft: 0,
+    marginRight: 0,
+  },
+  mx_2xs: {
+    marginLeft: tokens.space._2xs,
+    marginRight: tokens.space._2xs,
+  },
+  mx_xs: {
+    marginLeft: tokens.space.xs,
+    marginRight: tokens.space.xs,
+  },
+  mx_sm: {
+    marginLeft: tokens.space.sm,
+    marginRight: tokens.space.sm,
+  },
+  mx_md: {
+    marginLeft: tokens.space.md,
+    marginRight: tokens.space.md,
+  },
+  mx_lg: {
+    marginLeft: tokens.space.lg,
+    marginRight: tokens.space.lg,
+  },
+  mx_xl: {
+    marginLeft: tokens.space.xl,
+    marginRight: tokens.space.xl,
+  },
+  mx_2xl: {
+    marginLeft: tokens.space._2xl,
+    marginRight: tokens.space._2xl,
+  },
+  mx_3xl: {
+    marginLeft: tokens.space._3xl,
+    marginRight: tokens.space._3xl,
+  },
+  mx_4xl: {
+    marginLeft: tokens.space._4xl,
+    marginRight: tokens.space._4xl,
+  },
+  mx_5xl: {
+    marginLeft: tokens.space._5xl,
+    marginRight: tokens.space._5xl,
+  },
+  mx_auto: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  my_0: {
+    marginTop: 0,
+    marginBottom: 0,
+  },
+  my_2xs: {
+    marginTop: tokens.space._2xs,
+    marginBottom: tokens.space._2xs,
+  },
+  my_xs: {
+    marginTop: tokens.space.xs,
+    marginBottom: tokens.space.xs,
+  },
+  my_sm: {
+    marginTop: tokens.space.sm,
+    marginBottom: tokens.space.sm,
+  },
+  my_md: {
+    marginTop: tokens.space.md,
+    marginBottom: tokens.space.md,
+  },
+  my_lg: {
+    marginTop: tokens.space.lg,
+    marginBottom: tokens.space.lg,
+  },
+  my_xl: {
+    marginTop: tokens.space.xl,
+    marginBottom: tokens.space.xl,
+  },
+  my_2xl: {
+    marginTop: tokens.space._2xl,
+    marginBottom: tokens.space._2xl,
+  },
+  my_3xl: {
+    marginTop: tokens.space._3xl,
+    marginBottom: tokens.space._3xl,
+  },
+  my_4xl: {
+    marginTop: tokens.space._4xl,
+    marginBottom: tokens.space._4xl,
+  },
+  my_5xl: {
+    marginTop: tokens.space._5xl,
+    marginBottom: tokens.space._5xl,
+  },
+  my_auto: {
+    marginTop: 'auto',
+    marginBottom: 'auto',
+  },
+  mt_0: {
+    marginTop: 0,
+  },
+  mt_2xs: {
+    marginTop: tokens.space._2xs,
+  },
+  mt_xs: {
+    marginTop: tokens.space.xs,
+  },
+  mt_sm: {
+    marginTop: tokens.space.sm,
+  },
+  mt_md: {
+    marginTop: tokens.space.md,
+  },
+  mt_lg: {
+    marginTop: tokens.space.lg,
+  },
+  mt_xl: {
+    marginTop: tokens.space.xl,
+  },
+  mt_2xl: {
+    marginTop: tokens.space._2xl,
+  },
+  mt_3xl: {
+    marginTop: tokens.space._3xl,
+  },
+  mt_4xl: {
+    marginTop: tokens.space._4xl,
+  },
+  mt_5xl: {
+    marginTop: tokens.space._5xl,
+  },
+  mt_auto: {
+    marginTop: 'auto',
+  },
+  mb_0: {
+    marginBottom: 0,
+  },
+  mb_2xs: {
+    marginBottom: tokens.space._2xs,
+  },
+  mb_xs: {
+    marginBottom: tokens.space.xs,
+  },
+  mb_sm: {
+    marginBottom: tokens.space.sm,
+  },
+  mb_md: {
+    marginBottom: tokens.space.md,
+  },
+  mb_lg: {
+    marginBottom: tokens.space.lg,
+  },
+  mb_xl: {
+    marginBottom: tokens.space.xl,
+  },
+  mb_2xl: {
+    marginBottom: tokens.space._2xl,
+  },
+  mb_3xl: {
+    marginBottom: tokens.space._3xl,
+  },
+  mb_4xl: {
+    marginBottom: tokens.space._4xl,
+  },
+  mb_5xl: {
+    marginBottom: tokens.space._5xl,
+  },
+  mb_auto: {
+    marginBottom: 'auto',
+  },
+  ml_0: {
+    marginLeft: 0,
+  },
+  ml_2xs: {
+    marginLeft: tokens.space._2xs,
+  },
+  ml_xs: {
+    marginLeft: tokens.space.xs,
+  },
+  ml_sm: {
+    marginLeft: tokens.space.sm,
+  },
+  ml_md: {
+    marginLeft: tokens.space.md,
+  },
+  ml_lg: {
+    marginLeft: tokens.space.lg,
+  },
+  ml_xl: {
+    marginLeft: tokens.space.xl,
+  },
+  ml_2xl: {
+    marginLeft: tokens.space._2xl,
+  },
+  ml_3xl: {
+    marginLeft: tokens.space._3xl,
+  },
+  ml_4xl: {
+    marginLeft: tokens.space._4xl,
+  },
+  ml_5xl: {
+    marginLeft: tokens.space._5xl,
+  },
+  ml_auto: {
+    marginLeft: 'auto',
+  },
+  mr_0: {
+    marginRight: 0,
+  },
+  mr_2xs: {
+    marginRight: tokens.space._2xs,
+  },
+  mr_xs: {
+    marginRight: tokens.space.xs,
+  },
+  mr_sm: {
+    marginRight: tokens.space.sm,
+  },
+  mr_md: {
+    marginRight: tokens.space.md,
+  },
+  mr_lg: {
+    marginRight: tokens.space.lg,
+  },
+  mr_xl: {
+    marginRight: tokens.space.xl,
+  },
+  mr_2xl: {
+    marginRight: tokens.space._2xl,
+  },
+  mr_3xl: {
+    marginRight: tokens.space._3xl,
+  },
+  mr_4xl: {
+    marginRight: tokens.space._4xl,
+  },
+  mr_5xl: {
+    marginRight: tokens.space._5xl,
+  },
+  mr_auto: {
+    marginRight: 'auto',
+  },
+
+  /*==============================================
+  =        POINTER EVENTS & USER SELECT         =
+  = ------------------------------------------- =
+  = Atomic styles for dimensional control.      =
+  = Includes width, height, max/min dimensions  =
+  = and aspect ratio properties for precise     =
+  = element sizing and proportions.             =
+  ===============================================*/
+  pointer_events_none: {
+    pointerEvents: 'none',
+  },
+  pointer_events_auto: {
+    pointerEvents: 'auto',
+  },
+  user_select_none: {
+    userSelect: 'none',
+  },
+  user_select_text: {
+    userSelect: 'text',
+  },
+  user_select_all: {
+    userSelect: 'all',
+  },
+  outline_inset_1: {
+    outlineOffset: '-1px',
+  } as StyleProp<ViewStyle>,
+
+  /*==============================================
+  =               TEXT DECORATION               =
+  = ------------------------------------------- =
+  = Atomic styles for dimensional control.      =
+  = Includes width, height, max/min dimensions  =
+  = and aspect ratio properties for precise     =
+  = element sizing and proportions.             =
+  ===============================================*/
+  underline: {
+    textDecorationLine: 'underline',
+  },
+  strike_through: {
+    textDecorationLine: 'line-through',
+  },
+} as const
