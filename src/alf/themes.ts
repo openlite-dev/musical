@@ -1,4 +1,9 @@
-import { defaultScale } from '@/src/alf/util/color-generation'
+import {
+  BLUE_HUE,
+  defaultScale,
+  GREEN_HUE,
+  RED_HUE,
+} from '@/src/alf/util/color-generation'
 import type { Palette, Theme } from '@/src/alf/util/types'
 import { atoms } from '@/src/alf/atoms'
 
@@ -16,6 +21,16 @@ export interface Result {
   light: Theme
   dark: Theme
 }
+
+const themes = createThemes({
+  hues: {
+    primary: BLUE_HUE,
+    negative: RED_HUE,
+    positive: GREEN_HUE,
+  },
+})
+
+export const defaultTheme = themes.light
 
 export function createThemes({ hues }: Hues): Result {
   const color = {
