@@ -352,4 +352,290 @@ export const atoms = {
   border_r: {
     borderRightWidth: StyleSheet.hairlineWidth,
   },
+
+  /*==============================================
+  =                    SHADOW                   =
+  = ------------------------------------------- =
+  = Atomic styles for dimensional control.      =
+  = Includes width, height, max/min dimensions  =
+  = and aspect ratio properties for precise     =
+  = element sizing and proportions.             =
+  ===============================================*/
+  shadow_sm: {
+    shadowRadius: 8,
+    shadowOpacity: 0.1,
+    elevation: 8,
+  },
+  shadow_md: {
+    shadowRadius: 16,
+    shadowOpacity: 0.1,
+    elevation: 16,
+  },
+  shadow_lg: {
+    shadowRadius: 32,
+    shadowOpacity: 0.1,
+    elevation: 24,
+  },
+
+  /*==============================================
+  =                    PADDING                  =
+  = ------------------------------------------- =
+  = Atomic styles for dimensional control.      =
+  = Includes width, height, max/min dimensions  =
+  = and aspect ratio properties for precise     =
+  = element sizing and proportions.             =
+  ===============================================*/
+  p_0: {
+    padding: 0,
+  },
+  p_2xs: {
+    padding: tokens.space._2xs,
+  },
+  p_xs: {
+    padding: tokens.space.xs,
+  },
+  p_sm: {
+    padding: tokens.space.sm,
+  },
+  p_md: {
+    padding: tokens.space.md,
+  },
+  p_lg: {
+    padding: tokens.space.lg,
+  },
+  p_xl: {
+    padding: tokens.space.xl,
+  },
+  p_2xl: {
+    padding: tokens.space._2xl,
+  },
+  p_3xl: {
+    padding: tokens.space._3xl,
+  },
+  p_4xl: {
+    padding: tokens.space._4xl,
+  },
+  p_5xl: {
+    padding: tokens.space._5xl,
+  },
+  px_0: {
+    paddingLeft: 0,
+    paddingRight: 0,
+  },
+  px_2xs: {
+    paddingLeft: tokens.space._2xs,
+    paddingRight: tokens.space._2xs,
+  },
+  px_xs: {
+    paddingLeft: tokens.space.xs,
+    paddingRight: tokens.space.xs,
+  },
+  px_sm: {
+    paddingLeft: tokens.space.sm,
+    paddingRight: tokens.space.sm,
+  },
+  px_md: {
+    paddingLeft: tokens.space.md,
+    paddingRight: tokens.space.md,
+  },
+  px_lg: {
+    paddingLeft: tokens.space.lg,
+    paddingRight: tokens.space.lg,
+  },
+  px_xl: {
+    paddingLeft: tokens.space.xl,
+    paddingRight: tokens.space.xl,
+  },
+  px_2xl: {
+    paddingLeft: tokens.space._2xl,
+    paddingRight: tokens.space._2xl,
+  },
+  px_3xl: {
+    paddingLeft: tokens.space._3xl,
+    paddingRight: tokens.space._3xl,
+  },
+  px_4xl: {
+    paddingLeft: tokens.space._4xl,
+    paddingRight: tokens.space._4xl,
+  },
+  px_5xl: {
+    paddingLeft: tokens.space._5xl,
+    paddingRight: tokens.space._5xl,
+  },
+  py_0: {
+    paddingTop: 0,
+    paddingBottom: 0,
+  },
+  py_2xs: {
+    paddingTop: tokens.space._2xs,
+    paddingBottom: tokens.space._2xs,
+  },
+  py_xs: {
+    paddingTop: tokens.space.xs,
+    paddingBottom: tokens.space.xs,
+  },
+  py_sm: {
+    paddingTop: tokens.space.sm,
+    paddingBottom: tokens.space.sm,
+  },
+  py_md: {
+    paddingTop: tokens.space.md,
+    paddingBottom: tokens.space.md,
+  },
+  py_lg: {
+    paddingTop: tokens.space.lg,
+    paddingBottom: tokens.space.lg,
+  },
+  py_xl: {
+    paddingTop: tokens.space.xl,
+    paddingBottom: tokens.space.xl,
+  },
+  py_2xl: {
+    paddingTop: tokens.space._2xl,
+    paddingBottom: tokens.space._2xl,
+  },
+  py_3xl: {
+    paddingTop: tokens.space._3xl,
+    paddingBottom: tokens.space._3xl,
+  },
+  py_4xl: {
+    paddingTop: tokens.space._4xl,
+    paddingBottom: tokens.space._4xl,
+  },
+  py_5xl: {
+    paddingTop: tokens.space._5xl,
+    paddingBottom: tokens.space._5xl,
+  },
+  pt_0: {
+    paddingTop: 0,
+  },
+  pt_2xs: {
+    paddingTop: tokens.space._2xs,
+  },
+  pt_xs: {
+    paddingTop: tokens.space.xs,
+  },
+  pt_sm: {
+    paddingTop: tokens.space.sm,
+  },
+  pt_md: {
+    paddingTop: tokens.space.md,
+  },
+  pt_lg: {
+    paddingTop: tokens.space.lg,
+  },
+  pt_xl: {
+    paddingTop: tokens.space.xl,
+  },
+  pt_2xl: {
+    paddingTop: tokens.space._2xl,
+  },
+  pt_3xl: {
+    paddingTop: tokens.space._3xl,
+  },
+  pt_4xl: {
+    paddingTop: tokens.space._4xl,
+  },
+  pt_5xl: {
+    paddingTop: tokens.space._5xl,
+  },
+  pb_0: {
+    paddingBottom: 0,
+  },
+  pb_2xs: {
+    paddingBottom: tokens.space._2xs,
+  },
+  pb_xs: {
+    paddingBottom: tokens.space.xs,
+  },
+  pb_sm: {
+    paddingBottom: tokens.space.sm,
+  },
+  pb_md: {
+    paddingBottom: tokens.space.md,
+  },
+  pb_lg: {
+    paddingBottom: tokens.space.lg,
+  },
+  pb_xl: {
+    paddingBottom: tokens.space.xl,
+  },
+  pb_2xl: {
+    paddingBottom: tokens.space._2xl,
+  },
+  pb_3xl: {
+    paddingBottom: tokens.space._3xl,
+  },
+  pb_4xl: {
+    paddingBottom: tokens.space._4xl,
+  },
+  pb_5xl: {
+    paddingBottom: tokens.space._5xl,
+  },
+  pl_0: {
+    paddingLeft: 0,
+  },
+  pl_2xs: {
+    paddingLeft: tokens.space._2xs,
+  },
+  pl_xs: {
+    paddingLeft: tokens.space.xs,
+  },
+  pl_sm: {
+    paddingLeft: tokens.space.sm,
+  },
+  pl_md: {
+    paddingLeft: tokens.space.md,
+  },
+  pl_lg: {
+    paddingLeft: tokens.space.lg,
+  },
+  pl_xl: {
+    paddingLeft: tokens.space.xl,
+  },
+  pl_2xl: {
+    paddingLeft: tokens.space._2xl,
+  },
+  pl_3xl: {
+    paddingLeft: tokens.space._3xl,
+  },
+  pl_4xl: {
+    paddingLeft: tokens.space._4xl,
+  },
+  pl_5xl: {
+    paddingLeft: tokens.space._5xl,
+  },
+  pr_0: {
+    paddingRight: 0,
+  },
+  pr_2xs: {
+    paddingRight: tokens.space._2xs,
+  },
+  pr_xs: {
+    paddingRight: tokens.space.xs,
+  },
+  pr_sm: {
+    paddingRight: tokens.space.sm,
+  },
+  pr_md: {
+    paddingRight: tokens.space.md,
+  },
+  pr_lg: {
+    paddingRight: tokens.space.lg,
+  },
+  pr_xl: {
+    paddingRight: tokens.space.xl,
+  },
+  pr_2xl: {
+    paddingRight: tokens.space._2xl,
+  },
+  pr_3xl: {
+    paddingRight: tokens.space._3xl,
+  },
+  pr_4xl: {
+    paddingRight: tokens.space._4xl,
+  },
+  pr_5xl: {
+    paddingRight: tokens.space._5xl,
+  },
 }
