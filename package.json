@@ -1,7 +1,7 @@
 {
   "name": "musical",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.2.1",
+  "packageManager": "npm@11.1.0",
   "main": "expo-router/entry.js",
   "scripts": {
     "start": "expo start",
