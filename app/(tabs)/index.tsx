@@ -1,21 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native'
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
+import { Text, View } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { atoms as a, useTheme } from '@musical/alf'
 
 export default function App() {
+  const t = useTheme()
+  const { top } = useSafeAreaInsets()
   return (
-    <View style={styles.container}>
-      <Text style={{ fontWeight: 900, fontSize: 34 }}>Co Text Bold</Text>
-      <Text style={{ fontSize: 30 }}>Co Text</Text>
-      <Text style={{ fontSize: 30 }}>Co Text Test</Text>
-      <Text>Co Text</Text>
+    <View style={{ paddingTop: top }}>
+      <View
+        style={[
+          a.size_5xl,
+          a.rounded_full,
+          { backgroundColor: t.palette.primary_500 },
+        ]}
+      >
+        <Text>CIRCLE</Text>
+      </View>
+      <Text style={[a.text_center]}>Hello, world</Text>
     </View>
   )
 }
