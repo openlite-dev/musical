@@ -1,5 +1,5 @@
 import type { StyleProp, ViewStyle } from 'react-native'
-import { Platform, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 
 import * as tokens from '@/src/alf/tokens'
 import { native } from '@/src/alf/util/platform'
@@ -18,12 +18,6 @@ export const atoms = {
   = Includes absolute, relative, fixed, sticky  =
   = and other position-related properties.      =
   ===============================================*/
-  fixed: {
-    position: Platform.select({
-      web: 'fixed',
-      native: 'absolute',
-    }) as 'absolute',
-  },
   absolute: {
     position: 'absolute',
   },
