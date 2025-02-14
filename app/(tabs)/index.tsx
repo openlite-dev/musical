@@ -1,11 +1,22 @@
 import { Text, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { atoms as a, useTheme } from '@musical/alf'
 
 export default function App() {
+  const t = useTheme()
   const { top } = useSafeAreaInsets()
   return (
     <View style={{ paddingTop: top }}>
-      <Text>Hello, world</Text>
+      <View
+        style={[
+          a.size_5xl,
+          a.rounded_full,
+          { backgroundColor: t.palette.primary_500 },
+        ]}
+      >
+        <Text>CIRCLE</Text>
+      </View>
+      <Text style={[a.text_center]}>Hello, world</Text>
     </View>
   )
 }

@@ -69,6 +69,106 @@ export const atoms = {
   h_full: {
     height: '100%',
   },
+  w_2xs: {
+    width: tokens.space._2xs,
+  },
+  w_xs: {
+    width: tokens.space.xs,
+  },
+  w_sm: {
+    width: tokens.space.sm,
+  },
+  w_md: {
+    width: tokens.space.md,
+  },
+  w_lg: {
+    width: tokens.space.lg,
+  },
+  w_xl: {
+    width: tokens.space.xl,
+  },
+  w_2xl: {
+    width: tokens.space._2xl,
+  },
+  w_3xl: {
+    width: tokens.space._3xl,
+  },
+  w_4xl: {
+    width: tokens.space._4xl,
+  },
+  w_5xl: {
+    width: tokens.space._5xl,
+  },
+  h_2xs: {
+    height: tokens.space._2xs,
+  },
+  h_xs: {
+    height: tokens.space.xs,
+  },
+  h_sm: {
+    height: tokens.space.sm,
+  },
+  h_md: {
+    height: tokens.space.md,
+  },
+  h_lg: {
+    height: tokens.space.lg,
+  },
+  h_xl: {
+    height: tokens.space.xl,
+  },
+  h_2xl: {
+    height: tokens.space._2xl,
+  },
+  h_3xl: {
+    height: tokens.space._3xl,
+  },
+  h_4xl: {
+    height: tokens.space._4xl,
+  },
+  h_5xl: {
+    height: tokens.space._5xl,
+  },
+  size_2xs: {
+    width: tokens.space._2xs,
+    height: tokens.space._2xs,
+  },
+  size_xs: {
+    width: tokens.space.xs,
+    height: tokens.space.xs,
+  },
+  size_sm: {
+    width: tokens.space.sm,
+    height: tokens.space.sm,
+  },
+  size_md: {
+    width: tokens.space.md,
+    height: tokens.space.md,
+  },
+  size_lg: {
+    width: tokens.space.lg,
+    height: tokens.space.lg,
+  },
+  size_xl: {
+    width: tokens.space.xl,
+    height: tokens.space.xl,
+  },
+  size_2xl: {
+    width: tokens.space._2xl,
+    height: tokens.space._2xl,
+  },
+  size_3xl: {
+    width: tokens.space._3xl,
+    height: tokens.space._3xl,
+  },
+  size_4xl: {
+    width: tokens.space._4xl,
+    height: tokens.space._4xl,
+  },
+  size_5xl: {
+    width: tokens.space._5xl,
+    height: tokens.space._5xl,
+  },
   util_screen_outer: {
     height: '100%',
   } as StyleProp<ViewStyle>,
