@@ -1,5 +1,5 @@
 import type { StyleProp, ViewStyle } from 'react-native'
-import { Platform } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
 
 import * as tokens from '@/src/alf/tokens'
 import { native } from '@/src/alf/util/platform'
@@ -230,5 +230,126 @@ export const atoms = {
   },
   self_baseline: {
     alignSelf: 'baseline',
+  },
+
+  /*==============================================
+  =                    TEXT                     =
+  = ------------------------------------------- =
+  = Atomic styles for dimensional control.      =
+  = Includes width, height, max/min dimensions  =
+  = and aspect ratio properties for precise     =
+  = element sizing and proportions.             =
+  ===============================================*/
+  text_left: {
+    textAlign: 'left',
+  },
+  text_center: {
+    textAlign: 'center',
+  },
+  text_right: {
+    textAlign: 'right',
+  },
+  text_2xs: {
+    fontSize: tokens.fontSize._2xs,
+    letterSpacing: tokens.TRACKING,
+  },
+  text_xs: {
+    fontSize: tokens.fontSize.xs,
+    letterSpacing: tokens.TRACKING,
+  },
+  text_sm: {
+    fontSize: tokens.fontSize.sm,
+    letterSpacing: tokens.TRACKING,
+  },
+  text_md: {
+    fontSize: tokens.fontSize.md,
+    letterSpacing: tokens.TRACKING,
+  },
+  text_lg: {
+    fontSize: tokens.fontSize.lg,
+    letterSpacing: tokens.TRACKING,
+  },
+  text_xl: {
+    fontSize: tokens.fontSize.xl,
+    letterSpacing: tokens.TRACKING,
+  },
+  text_2xl: {
+    fontSize: tokens.fontSize._2xl,
+    letterSpacing: tokens.TRACKING,
+  },
+  text_3xl: {
+    fontSize: tokens.fontSize._3xl,
+    letterSpacing: tokens.TRACKING,
+  },
+  text_4xl: {
+    fontSize: tokens.fontSize._4xl,
+    letterSpacing: tokens.TRACKING,
+  },
+  text_5xl: {
+    fontSize: tokens.fontSize._5xl,
+    letterSpacing: tokens.TRACKING,
+  },
+  leading_tight: {
+    lineHeight: 1.15,
+  },
+  leading_snug: {
+    lineHeight: 1.3,
+  },
+  leading_normal: {
+    lineHeight: 1.5,
+  },
+  tracking_normal: {
+    letterSpacing: tokens.TRACKING,
+  },
+  font_normal: {
+    fontWeight: tokens.fontWeight.normal,
+  },
+  font_bold: {
+    fontWeight: tokens.fontWeight.bold,
+  },
+  font_extrabold: {
+    fontWeight: tokens.fontWeight.extrabold,
+  },
+  italic: {
+    fontStyle: 'italic',
+  },
+
+  /*==============================================
+  =                    BORDER                   =
+  = ------------------------------------------- =
+  = Atomic styles for dimensional control.      =
+  = Includes width, height, max/min dimensions  =
+  = and aspect ratio properties for precise     =
+  = element sizing and proportions.             =
+  ===============================================*/
+  border_0: {
+    borderWidth: 0,
+  },
+  border_t_0: {
+    borderTopWidth: 0,
+  },
+  border_b_0: {
+    borderBottomWidth: 0,
+  },
+  border_l_0: {
+    borderLeftWidth: 0,
+  },
+  border_r_0: {
+    borderRightWidth: 0,
+  },
+  border: {
+    borderWidth: StyleSheet.hairlineWidth,
+  },
+  border_t: {
+    borderTopWidth: StyleSheet.hairlineWidth,
+  },
+  border_b: {
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+  border_l: {
+    borderLeftWidth: StyleSheet.hairlineWidth,
+  },
+  border_r: {
+    borderRightWidth: StyleSheet.hairlineWidth,
   },
 }
