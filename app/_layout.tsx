@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar'
 import { useFonts } from 'expo-font'
 import * as SplashScreen from 'expo-splash-screen'
 import { useEffect } from 'react'
+import { ThemeProvider } from '@/src/alf'
 
 SplashScreen.preventAutoHideAsync()
 
@@ -22,12 +23,12 @@ export default function Layout() {
     return null
   }
   return (
-    <>
+    <ThemeProvider theme="light">
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
-    </>
+    </ThemeProvider>
   )
 }

@@ -3,6 +3,10 @@ import { createThemes, defaultTheme } from '@/src/alf/themes'
 import type { Theme, ThemeName } from '@/src/alf/util/types'
 import { BLUE_HUE, GREEN_HUE, RED_HUE } from './util/color-generation'
 
+export { atoms } from '@/src/alf/atoms'
+export * as tokens from '@/src/alf/tokens'
+export * from '@/src/alf//util/types'
+
 export type Alf = {
   themeName: ThemeName
   theme: Theme
