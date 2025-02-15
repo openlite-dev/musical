@@ -437,6 +437,12 @@ export const atoms = {
   border: {
     borderWidth: StyleSheet.hairlineWidth,
   },
+  border_2: {
+    borderWidth: tokens.space.xs,
+  },
+  border_4: {
+    borderWidth: tokens.space.sm,
+  },
   border_t: {
     borderTopWidth: StyleSheet.hairlineWidth,
   },

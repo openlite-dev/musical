@@ -32,33 +32,64 @@ export type Palette = {
   primary_950: string
   primary_975: string
 
-  positive_25: string
-  positive_50: string
-  positive_100: string
-  positive_200: string
-  positive_300: string
-  positive_400: string
-  positive_500: string
-  positive_600: string
-  positive_700: string
-  positive_800: string
-  positive_900: string
-  positive_950: string
-  positive_975: string
+  success_25: string
+  success_50: string
+  success_100: string
+  success_200: string
+  success_300: string
+  success_400: string
+  success_500: string
+  success_600: string
+  success_700: string
+  success_800: string
+  success_900: string
+  success_950: string
+  success_975: string
 
-  negative_25: string
-  negative_50: string
-  negative_100: string
-  negative_200: string
-  negative_300: string
-  negative_400: string
-  negative_500: string
-  negative_600: string
-  negative_700: string
-  negative_800: string
-  negative_900: string
-  negative_950: string
-  negative_975: string
+  info_25: string
+  info_50: string
+  info_100: string
+  info_200: string
+  info_300: string
+  info_400: string
+  info_500: string
+  info_600: string
+  info_700: string
+  info_800: string
+  info_900: string
+  info_950: string
+  info_975: string
+
+  error_25: string
+  error_50: string
+  error_100: string
+  error_200: string
+  error_300: string
+  error_400: string
+  error_500: string
+  error_600: string
+  error_700: string
+  error_800: string
+  error_900: string
+  error_950: string
+  error_975: string
+}
+
+export type PaletteKeys = keyof Palette
+
+type BgColorKeys = `bg_${PaletteKeys}`
+type BorderColorKeys = `border_${PaletteKeys}`
+
+export type BgColorAtoms = {
+  [K in BgColorKeys]: {
+    backgroundColor: string
+  }
+}
+
+export type BorderColorAtoms = {
+  [K in BorderColorKeys]: {
+    borderColor: string
+  }
 }
 
 export type ThemedAtoms = {
@@ -152,5 +183,5 @@ export type Theme = {
   scheme: 'light' | 'dark'
   name: ThemeName
   palette: Palette
-  atoms: ThemedAtoms
+  atoms: ThemedAtoms & BgColorAtoms & BorderColorAtoms
 }

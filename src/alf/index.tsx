@@ -1,7 +1,7 @@
 import React from 'react'
 import { createThemes, defaultTheme } from '@/src/alf/themes'
 import type { Theme, ThemeName } from '@/src/alf/util/types'
-import { BLUE_HUE, GREEN_HUE, RED_HUE } from './util/color-generation'
+import { HUES } from './util/color-generation'
 
 export { atoms } from '@/src/alf/atoms'
 export * as tokens from '@/src/alf/tokens'
@@ -18,9 +18,11 @@ export const Context = React.createContext<Alf>({
   theme: defaultTheme,
   themes: createThemes({
     hues: {
-      primary: BLUE_HUE,
-      negative: RED_HUE,
-      positive: GREEN_HUE,
+      primary: HUES.PRIMARY,
+      success: HUES.SUCCESS,
+      info: HUES.INFO,
+      warn: HUES.WARN,
+      error: HUES.ERROR,
     },
   }),
 })
@@ -43,9 +45,11 @@ export function ThemeProvider({
   const themes = React.useMemo(() => {
     return createThemes({
       hues: {
-        primary: BLUE_HUE,
-        negative: RED_HUE,
-        positive: GREEN_HUE,
+        primary: HUES.PRIMARY,
+        success: HUES.SUCCESS,
+        info: HUES.INFO,
+        warn: HUES.WARN,
+        error: HUES.ERROR,
       },
     })
   }, [])
