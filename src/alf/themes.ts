@@ -3,6 +3,7 @@ import type {
   BgColorAtoms,
   BorderColorAtoms,
   Palette,
+  TextColorAtoms,
   Theme,
 } from '@/src/alf/util/types'
 import { atoms } from '@/src/alf/atoms'
@@ -56,6 +57,18 @@ function createBorderAtoms(palette: Palette): BorderColorAtoms {
     // @ts-expect-error
     colorAtoms[`border_${key}`] = {
       borderColor: value,
+    }
+  })
+  return colorAtoms
+}
+
+function createTextAtoms(palette: Palette): TextColorAtoms {
+  const colorAtoms = {} as TextColorAtoms
+
+  Object.entries(palette).forEach(([key, value]) => {
+    // @ts-expect-error
+    colorAtoms[`text_${key}`] = {
+      color: value,
     }
   })
   return colorAtoms
@@ -309,6 +322,7 @@ export function createThemes({ hues }: Hues): Result {
     atoms: {
       ...createBackgroundAtoms(lightPalette),
       ...createBorderAtoms(lightPalette),
+      ...createTextAtoms(lightPalette),
       text: {
         color: lightPalette.black,
       },
@@ -397,6 +411,7 @@ export function createThemes({ hues }: Hues): Result {
     atoms: {
       ...createBackgroundAtoms(darkPalette),
       ...createBorderAtoms(darkPalette),
+      ...createTextAtoms(darkPalette),
       text: {
         color: darkPalette.white,
       },

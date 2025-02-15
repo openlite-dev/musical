@@ -79,6 +79,7 @@ export type PaletteKeys = keyof Palette
 
 type BgColorKeys = `bg_${PaletteKeys}`
 type BorderColorKeys = `border_${PaletteKeys}`
+type TextColorKeys = `text_${PaletteKeys}`
 
 export type BgColorAtoms = {
   [K in BgColorKeys]: {
@@ -89,6 +90,12 @@ export type BgColorAtoms = {
 export type BorderColorAtoms = {
   [K in BorderColorKeys]: {
     borderColor: string
+  }
+}
+
+export type TextColorAtoms = {
+  [K in TextColorKeys]: {
+    color: string
   }
 }
 
@@ -183,5 +190,5 @@ export type Theme = {
   scheme: 'light' | 'dark'
   name: ThemeName
   palette: Palette
-  atoms: ThemedAtoms & BgColorAtoms & BorderColorAtoms
+  atoms: ThemedAtoms & BgColorAtoms & BorderColorAtoms & TextColorAtoms
 }
