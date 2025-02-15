@@ -2,16 +2,25 @@
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "plugins": ["import", "typescript", "unicorn"],
   "rules": {
-    "no-unused-vars": [
-      "warn",
-      { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
-    ]
+    "eqeqeq": "warn",
+    "import/no-cycle": "error"
   },
   "overrides": [
     {
       "files": ["*.test.ts", "*.spec.ts"],
       "rules": {
         "@typescript-eslint/no-explicit-any": "off"
+      }
+    },
+    {
+      "files": ["**/src/**", "**/app/**"],
+      "rules": {
+        "no-console": [
+          "error",
+          {
+            "allow": ["warn", "error", "debug", "info"]
+          }
+        ]
       }
     }
   ]
