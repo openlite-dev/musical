@@ -11,7 +11,8 @@ export default function App() {
         style={[
           a.size_5xl,
           a.rounded_full,
-          { backgroundColor: t.palette.primary_500 },
+          a.border_2,
+          t.atoms.border_success_500,
         ]}
       >
         <Text>CIRCLE</Text>

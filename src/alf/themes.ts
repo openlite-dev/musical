@@ -1,17 +1,19 @@
-import {
-  BLUE_HUE,
-  defaultScale,
-  GREEN_HUE,
-  RED_HUE,
-} from '@/src/alf/util/color-generation'
-import type { Palette, Theme } from '@/src/alf/util/types'
+import { HUES, defaultScale } from '@/src/alf/util/color-generation'
+import type {
+  BgColorAtoms,
+  BorderColorAtoms,
+  Palette,
+  Theme,
+} from '@/src/alf/util/types'
 import { atoms } from '@/src/alf/atoms'
 
 export interface Hues {
   hues: {
     primary: number
-    negative: number
-    positive: number
+    success: number
+    info: number
+    warn: number
+    error: number
   }
 }
 
@@ -24,17 +26,44 @@ export interface Result {
 
 const themes = createThemes({
   hues: {
-    primary: BLUE_HUE,
-    negative: RED_HUE,
-    positive: GREEN_HUE,
+    primary: HUES.PRIMARY,
+    success: HUES.SUCCESS,
+    info: HUES.INFO,
+    warn: HUES.WARN,
+    error: HUES.ERROR,
   },
 })
 
 export const defaultTheme = themes.light
 
+function createBackgroundAtoms(palette: Palette): BgColorAtoms {
+  const colorAtoms = {} as BgColorAtoms
+
+  Object.entries(palette).forEach(([key, value]) => {
+    // @ts-expect-error
+    colorAtoms[`bg_${key}`] = {
+      backgroundColor: value,
+    }
+  })
+
+  return colorAtoms
+}
+
+function createBorderAtoms(palette: Palette): BorderColorAtoms {
+  const colorAtoms = {} as BorderColorAtoms
+
+  Object.entries(palette).forEach(([key, value]) => {
+    // @ts-expect-error
+    colorAtoms[`border_${key}`] = {
+      borderColor: value,
+    }
+  })
+  return colorAtoms
+}
+
 export function createThemes({ hues }: Hues): Result {
   const color = {
-    black: '#000000',
+    black: '#191D21',
 
     gray_0: `hsl(${hues.primary}, 20%, ${defaultScale[14]}%)`,
     gray_25: `hsl(${hues.primary}, 20%, ${defaultScale[13]}%)`,
@@ -66,33 +95,61 @@ export function createThemes({ hues }: Hues): Result {
     primary_950: `hsl(${hues.primary}, 99%, 10%)`,
     primary_975: `hsl(${hues.primary}, 99%, 7%)`,
 
-    green_25: `hsl(${hues.positive}, 82%, 97%)`,
-    green_50: `hsl(${hues.positive}, 82%, 95%)`,
-    green_100: `hsl(${hues.positive}, 82%, 90%)`,
-    green_200: `hsl(${hues.positive}, 82%, 80%)`,
-    green_300: `hsl(${hues.positive}, 82%, 70%)`,
-    green_400: `hsl(${hues.positive}, 82%, 60%)`,
-    green_500: `hsl(${hues.positive}, 82%, 50%)`,
-    green_600: `hsl(${hues.positive}, 82%, 42%)`,
-    green_700: `hsl(${hues.positive}, 82%, 34%)`,
-    green_800: `hsl(${hues.positive}, 82%, 26%)`,
-    green_900: `hsl(${hues.positive}, 82%, 18%)`,
-    green_950: `hsl(${hues.positive}, 82%, 10%)`,
-    green_975: `hsl(${hues.positive}, 82%, 7%)`,
+    success_25: `hsl(${hues.success}, 82%, 97%)`,
+    success_50: `hsl(${hues.success}, 82%, 95%)`,
+    success_100: `hsl(${hues.success}, 82%, 90%)`,
+    success_200: `hsl(${hues.success}, 82%, 80%)`,
+    success_300: `hsl(${hues.success}, 82%, 70%)`,
+    success_400: `hsl(${hues.success}, 82%, 60%)`,
+    success_500: `hsl(${hues.success}, 82%, 50%)`,
+    success_600: `hsl(${hues.success}, 82%, 42%)`,
+    success_700: `hsl(${hues.success}, 82%, 34%)`,
+    success_800: `hsl(${hues.success}, 82%, 26%)`,
+    success_900: `hsl(${hues.success}, 82%, 18%)`,
+    success_950: `hsl(${hues.success}, 82%, 10%)`,
+    success_975: `hsl(${hues.success}, 82%, 7%)`,
 
-    red_25: `hsl(${hues.negative}, 91%, 97%)`,
-    red_50: `hsl(${hues.negative}, 91%, 95%)`,
-    red_100: `hsl(${hues.negative}, 91%, 90%)`,
-    red_200: `hsl(${hues.negative}, 91%, 80%)`,
-    red_300: `hsl(${hues.negative}, 91%, 70%)`,
-    red_400: `hsl(${hues.negative}, 91%, 60%)`,
-    red_500: `hsl(${hues.negative}, 91%, 50%)`,
-    red_600: `hsl(${hues.negative}, 91%, 42%)`,
-    red_700: `hsl(${hues.negative}, 91%, 34%)`,
-    red_800: `hsl(${hues.negative}, 91%, 26%)`,
-    red_900: `hsl(${hues.negative}, 91%, 18%)`,
-    red_950: `hsl(${hues.negative}, 91%, 10%)`,
-    red_975: `hsl(${hues.negative}, 91%, 7%)`,
+    info_25: `hsl(${hues.info}, 85%, 97%)`,
+    info_50: `hsl(${hues.info}, 85%, 95%)`,
+    info_100: `hsl(${hues.info}, 85%, 90%)`,
+    info_200: `hsl(${hues.info}, 85%, 80%)`,
+    info_300: `hsl(${hues.info}, 85%, 70%)`,
+    info_400: `hsl(${hues.info}, 85%, 60%)`,
+    info_500: `hsl(${hues.info}, 85%, 50%)`,
+    info_600: `hsl(${hues.info}, 85%, 42%)`,
+    info_700: `hsl(${hues.info}, 85%, 34%)`,
+    info_800: `hsl(${hues.info}, 85%, 26%)`,
+    info_900: `hsl(${hues.info}, 85%, 18%)`,
+    info_950: `hsl(${hues.info}, 85%, 10%)`,
+    info_975: `hsl(${hues.info}, 85%, 7%)`,
+
+    warn_25: `hsl(${hues.warn}, 95%, 97%)`,
+    warn_50: `hsl(${hues.warn}, 95%, 95%)`,
+    warn_100: `hsl(${hues.warn}, 95%, 90%)`,
+    warn_200: `hsl(${hues.warn}, 95%, 80%)`,
+    warn_300: `hsl(${hues.warn}, 95%, 70%)`,
+    warn_400: `hsl(${hues.warn}, 95%, 60%)`,
+    warn_500: `hsl(${hues.warn}, 95%, 50%)`,
+    warn_600: `hsl(${hues.warn}, 95%, 42%)`,
+    warn_700: `hsl(${hues.warn}, 95%, 34%)`,
+    warn_800: `hsl(${hues.warn}, 95%, 26%)`,
+    warn_900: `hsl(${hues.warn}, 95%, 18%)`,
+    warn_950: `hsl(${hues.warn}, 95%, 10%)`,
+    warn_975: `hsl(${hues.warn}, 95%, 7%)`,
+
+    error_25: `hsl(${hues.error}, 91%, 97%)`,
+    error_50: `hsl(${hues.error}, 91%, 95%)`,
+    error_100: `hsl(${hues.error}, 91%, 90%)`,
+    error_200: `hsl(${hues.error}, 91%, 80%)`,
+    error_300: `hsl(${hues.error}, 91%, 70%)`,
+    error_400: `hsl(${hues.error}, 91%, 60%)`,
+    error_500: `hsl(${hues.error}, 91%, 50%)`,
+    error_600: `hsl(${hues.error}, 91%, 42%)`,
+    error_700: `hsl(${hues.error}, 91%, 34%)`,
+    error_800: `hsl(${hues.error}, 91%, 26%)`,
+    error_900: `hsl(${hues.error}, 91%, 18%)`,
+    error_950: `hsl(${hues.error}, 91%, 10%)`,
+    error_975: `hsl(${hues.error}, 91%, 7%)`,
   } as const
 
   const lightPalette = {
@@ -127,33 +184,47 @@ export function createThemes({ hues }: Hues): Result {
     primary_950: color.primary_950,
     primary_975: color.primary_975,
 
-    positive_25: color.green_25,
-    positive_50: color.green_50,
-    positive_100: color.green_100,
-    positive_200: color.green_200,
-    positive_300: color.green_300,
-    positive_400: color.green_400,
-    positive_500: color.green_500,
-    positive_600: color.green_600,
-    positive_700: color.green_700,
-    positive_800: color.green_800,
-    positive_900: color.green_900,
-    positive_950: color.green_950,
-    positive_975: color.green_975,
+    success_25: color.success_25,
+    success_50: color.success_50,
+    success_100: color.success_100,
+    success_200: color.success_200,
+    success_300: color.success_300,
+    success_400: color.success_400,
+    success_500: color.success_500,
+    success_600: color.success_600,
+    success_700: color.success_700,
+    success_800: color.success_800,
+    success_900: color.success_900,
+    success_950: color.success_950,
+    success_975: color.success_975,
 
-    negative_25: color.red_25,
-    negative_50: color.red_50,
-    negative_100: color.red_100,
-    negative_200: color.red_200,
-    negative_300: color.red_300,
-    negative_400: color.red_400,
-    negative_500: color.red_500,
-    negative_600: color.red_600,
-    negative_700: color.red_700,
-    negative_800: color.red_800,
-    negative_900: color.red_900,
-    negative_950: color.red_950,
-    negative_975: color.red_975,
+    info_25: color.info_25,
+    info_50: color.info_50,
+    info_100: color.info_100,
+    info_200: color.info_200,
+    info_300: color.info_300,
+    info_400: color.info_400,
+    info_500: color.info_500,
+    info_600: color.info_600,
+    info_700: color.info_700,
+    info_800: color.info_800,
+    info_900: color.info_900,
+    info_950: color.info_950,
+    info_975: color.info_975,
+
+    error_25: color.error_25,
+    error_50: color.error_50,
+    error_100: color.error_100,
+    error_200: color.error_200,
+    error_300: color.error_300,
+    error_400: color.error_400,
+    error_500: color.error_500,
+    error_600: color.error_600,
+    error_700: color.error_700,
+    error_800: color.error_800,
+    error_900: color.error_900,
+    error_950: color.error_950,
+    error_975: color.error_975,
   } as const
 
   const darkPalette: Palette = {
@@ -188,33 +259,47 @@ export function createThemes({ hues }: Hues): Result {
     primary_950: color.primary_50,
     primary_975: color.primary_25,
 
-    positive_25: color.green_975,
-    positive_50: color.green_950,
-    positive_100: color.green_900,
-    positive_200: color.green_800,
-    positive_300: color.green_700,
-    positive_400: color.green_600,
-    positive_500: color.green_500,
-    positive_600: color.green_400,
-    positive_700: color.green_300,
-    positive_800: color.green_200,
-    positive_900: color.green_100,
-    positive_950: color.green_50,
-    positive_975: color.green_25,
+    success_25: color.success_975,
+    success_50: color.success_950,
+    success_100: color.success_900,
+    success_200: color.success_800,
+    success_300: color.success_700,
+    success_400: color.success_600,
+    success_500: color.success_500,
+    success_600: color.success_400,
+    success_700: color.success_300,
+    success_800: color.success_200,
+    success_900: color.success_100,
+    success_950: color.success_50,
+    success_975: color.success_25,
 
-    negative_25: color.red_975,
-    negative_50: color.red_950,
-    negative_100: color.red_900,
-    negative_200: color.red_800,
-    negative_300: color.red_700,
-    negative_400: color.red_600,
-    negative_500: color.red_500,
-    negative_600: color.red_400,
-    negative_700: color.red_300,
-    negative_800: color.red_200,
-    negative_900: color.red_100,
-    negative_950: color.red_50,
-    negative_975: color.red_25,
+    info_25: color.info_975,
+    info_50: color.info_950,
+    info_100: color.info_900,
+    info_200: color.info_800,
+    info_300: color.info_700,
+    info_400: color.info_600,
+    info_500: color.info_500,
+    info_600: color.info_400,
+    info_700: color.info_300,
+    info_800: color.info_200,
+    info_900: color.info_100,
+    info_950: color.info_50,
+    info_975: color.info_25,
+
+    error_25: color.error_975,
+    error_50: color.error_950,
+    error_100: color.error_900,
+    error_200: color.error_800,
+    error_300: color.error_700,
+    error_400: color.error_600,
+    error_500: color.error_500,
+    error_600: color.error_400,
+    error_700: color.error_300,
+    error_800: color.error_200,
+    error_900: color.error_100,
+    error_950: color.error_50,
+    error_975: color.error_25,
   } as const
 
   const light: Theme = {
@@ -222,6 +307,8 @@ export function createThemes({ hues }: Hues): Result {
     name: 'light',
     palette: lightPalette,
     atoms: {
+      ...createBackgroundAtoms(lightPalette),
+      ...createBorderAtoms(lightPalette),
       text: {
         color: lightPalette.black,
       },
@@ -308,6 +395,8 @@ export function createThemes({ hues }: Hues): Result {
     name: 'dark',
     palette: darkPalette,
     atoms: {
+      ...createBackgroundAtoms(darkPalette),
+      ...createBorderAtoms(darkPalette),
       text: {
         color: darkPalette.white,
       },
