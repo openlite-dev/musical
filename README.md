@@ -7,7 +7,7 @@ Get the app itself:
 > [!WARNING]
 > Currently this app is in constant development and planning, if you want to contribute you can go to the file [CONTRIBUTING](#)
 
-- **Web: [musical.xyz](#)** 
+- **Web: [musical.xyz](#)**
 - **iOS: [App Store](#)**
 - **Android: [Play Store](#)**
 
