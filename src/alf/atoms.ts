@@ -295,19 +295,19 @@ export const atoms = {
   justify_end: {
     justifyContent: 'flex-end',
   },
-  align_center: {
+  items_center: {
     alignItems: 'center',
   },
-  align_start: {
+  items_start: {
     alignItems: 'flex-start',
   },
-  align_end: {
+  items_end: {
     alignItems: 'flex-end',
   },
-  align_baseline: {
+  items_baseline: {
     alignItems: 'baseline',
   },
-  align_stretch: {
+  items_stretch: {
     alignItems: 'stretch',
   },
   self_auto: {
