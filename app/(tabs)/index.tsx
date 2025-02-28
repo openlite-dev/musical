@@ -1,12 +1,11 @@
-import UApp from '@/src/components/app'
-import Menu from '@/src/components/menu'
 import Playlists from '@/src/components/playlists'
+import Search from '@/src/components/search'
 
 export default function App() {
   return (
-    <UApp>
-      <Menu />
+    <>
+      <Search />
       <Playlists />
-    </UApp>
+    </>
   )
 }
