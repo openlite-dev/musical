@@ -1,10 +1,9 @@
 import { Image, Pressable, View } from 'react-native'
-import { atoms as a, useTheme } from '@musical/alf'
+import { atoms as a } from '@musical/alf'
 import UParagraph from '@/src/components/paragraph'
 import SvgNotification from '@/src/icons/notification'
 
 export default function Menu() {
-  const t = useTheme()
   return (
     <View
       style={[a.flex_row, a.justify_between, a.items_center, a.px_xl, a.pb_0]}
