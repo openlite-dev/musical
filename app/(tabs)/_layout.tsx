@@ -1,27 +1,41 @@
-import SvgAccountUser from '@/src/icons/account-user'
-import SvgMailSend from '@/src/icons/mail-send'
-import SvgMuseum from '@/src/icons/museum'
+import UApp from '@/src/components/app'
+import Menu from '@/src/components/menu'
+import SvgBaselineHome from '@/src/icons/baseline-home'
+import SvgRoundLibraryMusic from '@/src/icons/round-library-music'
+import SvgRoundMusicNote from '@/src/icons/round-music-note'
 import { Tabs } from 'expo-router'
 
 export default function TabsLayout() {
   return (
-    <Tabs
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      <Tabs.Screen
-        name="index"
-        options={{ title: 'Principal', tabBarIcon: () => <SvgAccountUser /> }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{ title: 'Explorar', tabBarIcon: () => <SvgMailSend /> }}
-      />
-      <Tabs.Screen
-        name="library"
-        options={{ title: 'Biblioteca', tabBarIcon: () => <SvgMuseum /> }}
-      />
-    </Tabs>
+    <UApp>
+      <Menu />
+      <Tabs
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: 'Principal',
+            tabBarIcon: () => <SvgBaselineHome color="#000" />,
+          }}
+        />
+        <Tabs.Screen
+          name="explore"
+          options={{
+            title: 'Explorar',
+            tabBarIcon: () => <SvgRoundMusicNote color="#000" />,
+          }}
+        />
+        <Tabs.Screen
+          name="library"
+          options={{
+            title: 'Biblioteca',
+            tabBarIcon: () => <SvgRoundLibraryMusic color="#000" />,
+          }}
+        />
+      </Tabs>
+    </UApp>
   )
 }
