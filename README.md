@@ -5,7 +5,7 @@ Welcome friends! This is the codebase for the Musical app.
 Get the app itself:
 
 > [!WARNING]
-> Currently this app is in constant development and planning, if you want to contribute you can go to the file [CONTRIBUTING](#)
+> Musical App is no longer maintained.
 
 - **Web: [musical.sebastiandotdev.xyz](#)**
 - **iOS: [App Store](#)**
